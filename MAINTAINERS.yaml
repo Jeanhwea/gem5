@@ -284,3 +284,8 @@ website:
         - Bobby R. Bruce <bbruce@ucdavis.edu>
     experts:
         - Jason Lowe-Power <jason@lowepower.com>
+
+tutor:
+    desc: >-
+        Anything for learning gem5
+    status: orphaned
