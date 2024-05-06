@@ -1,5 +1,2 @@
 #!/bin/sh
-
-echo "Logging ..."
-
-/sbin/m5 exit
+/sbin/m5
