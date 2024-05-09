@@ -7,11 +7,11 @@
 namespace gem5
 {
 
-    class DemoObject : public SimObject
-    {
-    public:
-        DemoObject(const DemoObjectParams &p);
-    };
+class DemoObject : public SimObject
+{
+public:
+    DemoObject(const DemoObjectParams &p);
+};
 
 } // namespace gem5
 

@@ -5,10 +5,10 @@
 namespace gem5
 {
 
-    DemoObject::DemoObject(const DemoObjectParams &params) :
-        SimObject(params)
-    {
-        std::cout << "Demo World! From a SimObject!" << std::endl;
-    }
+DemoObject::DemoObject(const DemoObjectParams &params) :
+    SimObject(params)
+{
+    std::cout << "XXXXXXXXXXXXXXXXXXX" << std::endl;
+}
 
 } // namespace gem5
