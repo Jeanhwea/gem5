@@ -9,8 +9,18 @@ namespace gem5
 
 class DemoObject : public SimObject
 {
+private:
+    void processEvent();
+
+    EventFunctionWrapper event;
+
+    const Tick latency;
+
+    int timesLeft;
 public:
     DemoObject(const DemoObjectParams &p);
+
+    void startup() override;
 };
 
 } // namespace gem5
