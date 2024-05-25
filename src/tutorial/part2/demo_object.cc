@@ -11,10 +11,13 @@ namespace gem5
 DemoObject::DemoObject(const DemoObjectParams &params) :
     SimObject(params),
     event([this]{processEvent();}, name()),
-    latency(100),
-    timesLeft(10)
+    farewell(params.farewell_object),
+    myName(params.name),
+    latency(params.time_to_wait),
+    timesLeft(params.number_of_fires)
 {
-    DPRINTF(Demo, "DemoObject Created\n");
+    DPRINTF(Demo, "DemoObject Created, with name %s\n", myName);
+    panic_if(!farewell, "DemoObject must have a non-null FarewellObject");
 }
 
 void
@@ -25,6 +28,7 @@ DemoObject::processEvent()
 
     if (timesLeft <= 0) {
         DPRINTF(Demo, "Done firing!\n");
+        farewell->sayGoodbye(myName);
     } else {
         schedule(event, curTick() + latency);
     }
