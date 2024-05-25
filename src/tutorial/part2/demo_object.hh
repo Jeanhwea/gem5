@@ -17,6 +17,7 @@ private:
     const Tick latency;
 
     int timesLeft;
+
 public:
     DemoObject(const DemoObjectParams &p);
 
