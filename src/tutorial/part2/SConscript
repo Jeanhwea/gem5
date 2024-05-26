@@ -1,7 +1,11 @@
 Import('*')
 
 SimObject('DemoObject.py', sim_objects=['DemoObject', 'FarewellObject'])
+SimObject('DemoMemory.py', sim_objects=['DemoMemory'])
+
 Source('demo_object.cc')
 Source('farewell_object.cc')
+Source('demo_memory.cc')
 
 DebugFlag('Demo')
+DebugFlag('DemoMemory')
