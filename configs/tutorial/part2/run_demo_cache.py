@@ -23,7 +23,8 @@ system.cpu = X86TimingSimpleCPU()
 system.membus = SystemXBar()
 
 # Create a simple cache
-system.cache = SimpleCache(size="1kB")
+system.cache = DemoCache(size="1kB")
+# system.cache = DemoCache(size="128kB")
 
 # Connect the I and D cache ports of the CPU to the memobj.
 # Since cpu_side is a vector port, each time one of these is connected, it will
