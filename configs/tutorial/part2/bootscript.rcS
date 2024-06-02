@@ -1,0 +1,5 @@
+#!/bin/sh
+
+/bin/sh
+
+/sbin/m5 exit

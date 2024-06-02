@@ -1,1 +1,1 @@
-/util/term/m5term 3456
+./util/term/m5term 3456
